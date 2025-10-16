@@ -41,7 +41,7 @@ create role app_user with
     nobypassrls
 ;
 
-\connect app_db
+\\connect app_db
 
 create schema if not exists app;
 
