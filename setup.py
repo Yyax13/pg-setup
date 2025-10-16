@@ -15,6 +15,6 @@ create_file(".passwords",
 f"""# Passwords backup. Don't leak it
 POSTGRES_PASSWORD="{POSTGRES_PASSWORD}"
 APP_USER_PASS="{APP_USER_PASS}"
-""")
+""", True)
 
 print("Successfuly created all files, run 'make run' to continue...")
