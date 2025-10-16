@@ -1,7 +1,7 @@
 from utils import gen_tag
 
 dotenv = f"""
-POSTGRES_PASSWORD='{gen_tag}'
+POSTGRES_PASSWORD='{gen_tag()}'
 """
 
 docker_compose_yml = """
