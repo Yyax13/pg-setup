@@ -13,7 +13,7 @@ services:
             POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
 
         ports:
-            - "0.0.0.0:5432:5432"
+            - "0.0.0.0:55432:5432"
 
         volumes:
             - pgdata:/var/lib/postgresql/data
