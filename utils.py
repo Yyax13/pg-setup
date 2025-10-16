@@ -14,6 +14,6 @@ def gen_tag() -> str:
     return '-'.join(tag_parts)
 
 def create_file(path, content):
-    with open(path, 'x') as f:
+    with open(path, 'w') as f:
         f.write(content)
         print(f"Created {path}")
