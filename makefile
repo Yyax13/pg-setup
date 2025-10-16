@@ -13,6 +13,9 @@ logs:
 down-delete:
 	docker compose down --volumes --rmi all
 
+clean:
+	rm -rf __pycache__ .env initdb docker-compose.yml
+
 setup:
 	python3 ./setup.py
 
