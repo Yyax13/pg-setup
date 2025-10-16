@@ -1,7 +1,10 @@
 from files import *
 from utils import create_file
+import os
 
 print("Starting pg setup")
+
+os.mkdir("initdb", mode="744")
 
 create_file(".env", dotenv)
 create_file("docker-compose.yml", docker_compose_yml)
