@@ -1,7 +1,10 @@
 from utils import gen_tag
 
+POSTGRES_PASSWORD = gen_tag()
+APP_USER_PASS = gen_tag()
+
 dotenv = f"""
-POSTGRES_PASSWORD='{gen_tag()}'
+PG_PASS='{POSTGRES_PASSWORD}'
 """
 
 docker_compose_yml = """
@@ -10,7 +13,7 @@ services:
         image: postgres:16-alpine
         container_name: pg_min
         environment:
-            POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+            POSTGRES_PASSWORD: ${PG_PASS}
 
         ports:
             - "0.0.0.0:55432:5432"
@@ -32,7 +35,7 @@ create database app_db;
 
 create role app_user with
     login
-    password '{gen_tag()}'
+    password '{APP_USER_PASS}'
     nosuperuser
     nocreatedb
     nocreaterole
