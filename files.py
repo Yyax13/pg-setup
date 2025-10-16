@@ -39,7 +39,6 @@ create role app_user with
     nosuperuser
     nocreatedb
     nocreaterole
-    nologin inherit
     noreplication
     nobypassrls
 ;
